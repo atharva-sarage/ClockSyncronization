@@ -16,16 +16,18 @@ int serverPortSeed,clientPortSeed,k,n;
 double lDrift,lWkDrift, lP,lQ,lSend;
 int waiting = 0;
 int messageCounter=0,listners=0;
-mutex messageCounterLock,waitingSetLock,portmapLock,clientServerSocketLock,clientPortMapLock,serverSocketFdsLock,listenerLock,fileLock;
+// mutex locks for mutual exclusion of shared variables
+mutex waitingSetLock,portmapLock,clientServerSocketLock,clientPortMapLock,serverSocketFdsLock,listenerLock,fileLock;
 vector <int> serverSocketfds;
 int64_t** roundTime ;
 
 class localClock;
-localClock* globalTimeClock;
 /**
  * Helper Class for get the formatted time in HH:MM:SS 
  * */
 class Helper {
+    private:
+    static const int64_t bigConstant = 1600000000000000000;
     public:
     static string get_formatted_time(time_t t1) // gives formatted time in HH::MM::SS
     {
@@ -34,17 +36,19 @@ class Helper {
         sprintf(buffer,"%d : %d : %d",t2->tm_hour,t2->tm_min,t2->tm_sec);
         return buffer;
     }
-    static int getRandomNumber(int a, int b) 
+    static int64_t getRandomNumber(int64_t a, int64_t b) 
     {    
-        int out = a + rand() % (b - a + 1);
+        if(a>b)
+            swap(a,b);
+        int64_t out = a + rand() % (b - a + 1);
         return out;
     }
-    static double computeMean(int roundId){
-        double sum = 0;
+    static int64_t computeMean(int roundId){
+        int64_t sum = 0;
         for(int nodeId=1;nodeId<=n;nodeId++){
-            sum += roundTime[nodeId][roundId];
+            sum += roundTime[nodeId][roundId] - bigConstant;
         }
-        return sum/(n*1.0) ;
+        return sum/(n) + bigConstant ;
     }
     static double computeVariance(int roundId , double mean){
         double sum = 0;        
@@ -67,7 +71,7 @@ class localClock{
             int clockDrift = exponential_lDrift(eng);
             driftFactor += clockDrift;
             int sleepTime = exponential_lWkDrift(eng);
-            usleep(sleepTime *1000);
+            usleep(sleepTime *10000);
         }
     }
 
@@ -76,20 +80,23 @@ class localClock{
     localClock(bool driftApplicable){
         exponential_lDrift = std::exponential_distribution<double>(1.0/lDrift);
         exponential_lWkDrift = std::exponential_distribution<double>(1.0/lWkDrift);
+        errorFactor = rand()%100;
         if(driftApplicable)
             driftThread = thread(&localClock::incrementDriftFactor,this);
     }
     int64_t readTime(){
         std::chrono::time_point<std::chrono::system_clock> currentTime = std::chrono::high_resolution_clock::now();
         currentTime += std::chrono::nanoseconds(errorFactor + driftFactor);
-        cout<<errorFactor<<endl;
+        cout<<errorFactor<<" $$$ "<<driftFactor<<endl;
         auto duration = currentTime.time_since_epoch();
         auto nanoseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(duration);
         return nanoseconds.count();
     }
-    int64_t getOptimalDelta(int64_t t1,int64_t t2,int64_t t3,int64_t t4,int64_t t_1,int64_t t_2,int64_t t_3,int64_t t_4){
-        int64_t optimalDelta = (t2-t4-t1+t3)/2 -(t_2-t_1-t_4+t_3)/2; 
-        cout<<optimalDelta<<" "<<(t2-t4-t1+t3)/2<<" "<<(t_2-t_1-t_4+t_3)/2<<endl;
+    int64_t getOptimalDelta(int64_t t1,int64_t t2,int64_t t3,int64_t t4){
+        int64_t x = (t2-t4-t1+t3)/2; 
+        int64_t y = (t2 +t4 -t1-t3);
+        int64_t optimalDelta = Helper::getRandomNumber(x+y/2,x-(y/2));
+        cout<<"optimalDelta::"<<optimalDelta<<" "<<x<<" "<<y<<endl;
         return optimalDelta;
     }
     void update (int64_t optimalDelta){
@@ -116,7 +123,7 @@ class Node{
     thread server,senderThread; 
     sem_t waitingForResponse;
     int totalSent = 1;
-    int64_t t1,t_1;
+    int64_t t1;
     map <int,int> port_idx;
     localClock* nodeLocalClock;
     std::exponential_distribution<double>exponential_lP;
@@ -277,15 +284,12 @@ class Node{
 
                         // compute time and send back to sender                        
                         int64_t t2 = nodeLocalClock->readTime();
-                        int64_t t_2 = globalTimeClock->readTime();
 
                         int serverSleepTime = exponential_lQ(eng);
-                        usleep(serverSleepTime*1000);
+                        usleep(serverSleepTime*100);
 
-                        int64_t t3 = nodeLocalClock->readTime();
-                        int64_t t_3 = globalTimeClock->readTime();
-
-                        string responseString = "[r"+to_string(t2)+"*"+to_string(t3)+"$"+to_string(t_2)+"*"+to_string(t_3)+"]";
+                        int64_t t3 = nodeLocalClock->readTime();    
+                        string responseString = "[r"+to_string(t2)+"*"+to_string(t3)+"]";
                         clientServerSocketLock.lock();
                         int recieverSocket = clientServerSocket[{senderId,id}];
                         clientServerSocketLock.unlock();
@@ -307,15 +311,12 @@ class Node{
                         fileLock.lock();
                         output<<FinalString;
                         fileLock.unlock();
-                        pair<pair<int64_t,int64_t>,pair<int64_t,int64_t>> response = parseQueryString2(senderString);
-                        int64_t t2 = response.first.first;
-                        int64_t t3 = response.first.second;
-                        int64_t t_2 = response.second.first;
-                        int64_t t_3 = response.second.second;
+                        pair<int64_t,int64_t> response = parseQueryString(senderString);
+                        int64_t t2 = response.first;
+                        int64_t t3 = response.second;
                         int64_t t4 = nodeLocalClock->readTime();
-                        int64_t t_4  = globalTimeClock->readTime();
 
-                        int64_t optimalDelta = nodeLocalClock->getOptimalDelta(t1,t2,t3,t4,t_1,t_2,t_3,t_4);
+                        int64_t optimalDelta = nodeLocalClock->getOptimalDelta(t1,t2,t3,t4);
                         nodeLocalClock->update(optimalDelta);
                         roundTime[id][totalSent] = nodeLocalClock->readTime();
                         string FinalString2 = "Computing "+to_string(totalSent)+"st delta between server"+to_string(id)+" and server"+to_string(clientId)+" : "+to_string(optimalDelta)+"\n";
@@ -399,16 +400,14 @@ class Node{
         }
         int sendMessageToSocket(int recieverSocket,string message){
             int serverSleepTime = exponential_lSend(eng);
-            usleep(serverSleepTime*1000);
+            usleep(serverSleepTime*100);
             ssize_t sentLen = send(recieverSocket,message.c_str(), strlen(message.c_str()), 0);
             return sentLen;
         }
         void sendMessage(){
-            std::exponential_distribution<double>exponential(1.0/lP); // to generate sleep times having exponential distribution
             for(int i=1;i<=k;i++){
                 // select a random outdegree vertex
-                t1 = nodeLocalClock->readTime();
-                t_1 = globalTimeClock->readTime();
+                t1 = nodeLocalClock->readTime();                
                 int randomOutDegreeIndex = Helper::getRandomNumber(0,outDeg-1);
                 int reciever = outDegreeVertices[randomOutDegreeIndex] ;
                 clientServerSocketLock.lock();
@@ -433,7 +432,7 @@ class Node{
                 // wait in loop untill listerner updates optimal_delta 
                
                 totalSent++;
-                usleep(exponential(eng)*1000); // sleep for random time
+                usleep(exponential_lP(eng)*1000); // sleep for random time
             }           
             
             // close sockets
@@ -482,43 +481,9 @@ class Node{
             }
             queryResponse.second = stoll(temp);
             return queryResponse;           
-        }
-        
+        }       
 
-        pair<pair<int64_t,int64_t>,pair<int64_t,int64_t>> parseQueryString2(string str){
-            pair<pair<int64_t,int64_t>,pair<int64_t,int64_t>> queryResponse;
-            string temp;
-            int i = 1;
-            while(str[i] != '*'){
-                temp+=str[i];
-                i++;
-            }
-            queryResponse.first.first = stoll(temp);
-            temp.clear();
-            i++;
-            while(str[i] != '$'){
-                temp+=str[i];
-                i++;
-            }
-            queryResponse.first.second = stoll(temp);
-            temp.clear();
-            i++;
-
-              while(str[i] != '*'){
-                temp+=str[i];
-                i++;
-            }
-            queryResponse.second.first = stoll(temp);
-            temp.clear();
-            i++;
-            while(i<str.size()){
-                temp+=str[i];
-                i++;
-            }
-            queryResponse.second.second = stoll(temp);
-            
-            return queryResponse;           
-        }
+       
 
         // creates listner thread total no is given by indegree of this node in the graph
         void initClientListnerThreads(){
@@ -563,7 +528,6 @@ int main()
     vector <int> inverseAdjacencyList[n+5]; // to keep track of nodes that will send message to me
     vector <int> adjacencyList[n+5]; // to keep track of nodes whom I will send messages
     Node* nodes[n+5]; // Create n nodes
-    globalTimeClock = new localClock(false);
 
 
     waiting= n;
