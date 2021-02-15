@@ -21,21 +21,25 @@ mutex waitingSetLock,portmapLock,clientServerSocketLock,clientPortMapLock,server
 vector <int> serverSocketfds;
 int64_t** roundTime ;
 
-class localClock;
+class localClock; // forward decleration of localClock
 /**
  * Helper Class for get the formatted time in HH:MM:SS 
  * */
 class Helper {
     private:
-    static const int64_t bigConstant = 1600000000000000000;
+    static const int64_t bigConstant = 1600000000000000000; 
     public:
-    static string get_formatted_time(time_t t1) // gives formatted time in HH::MM::SS
+
+    // gives formatted time in HH::MM::SS
+    static string get_formatted_time(time_t t1) 
     {
         struct tm* t2=localtime(&t1);
         char buffer[20];
         sprintf(buffer,"%d : %d : %d",t2->tm_hour,t2->tm_min,t2->tm_sec);
         return buffer;
     }
+
+    // get random number in range (a,b)
     static int64_t getRandomNumber(int64_t a, int64_t b) 
     {    
         if(a>b)
@@ -43,13 +47,17 @@ class Helper {
         int64_t out = a + rand() % (b - a + 1);
         return out;
     }
-    static int64_t computeMean(int roundId){
+
+    // compute mean of all times in round with a given id
+    static int64_t computeMean(int roundId){ 
         int64_t sum = 0;
         for(int nodeId=1;nodeId<=n;nodeId++){
             sum += roundTime[nodeId][roundId] - bigConstant;
         }
         return sum/(n) + bigConstant ;
     }
+
+    // compute variance of all times in round with a given id
     static double computeVariance(int roundId , double mean){
         double sum = 0;        
         for(int nodeId=1;nodeId<=n;nodeId++){
@@ -60,6 +68,22 @@ class Helper {
         return var ;
     }
 };
+
+/**
+ * localClock class which acts as a virtual clock 
+ * Member Variables:
+ * errorFactor            - Some random error of clock in order of 10^-7 seconds
+ * driftFactor            - A random number to simulte drifting clocks which keeps on incrementing
+ * driftThread            - A thread simulating the drifting of clocks
+ * 
+ * Member Methods :
+ * incrementDriftFactor() - Increments driftFactor after a random interval
+ * readTime()             - return time accounting for driftFactor and errorFactor.
+ *                          Time is recorded in nanoseconds for precision
+ * getOptimalDelta()      - compute optimal delta for using P2P NTP protocol
+ * update()               - Update errorFactor which is computed after a syncronization round
+ * 
+ */
 class localClock{
     int errorFactor,driftFactor;   
     thread driftThread;  
@@ -69,9 +93,9 @@ class localClock{
 
         while(1){
             int clockDrift = exponential_lDrift(eng);
-            driftFactor += clockDrift;
-            int sleepTime = exponential_lWkDrift(eng);
-            usleep(sleepTime *10000);
+            driftFactor += clockDrift; // add to drift factor
+            int sleepTime = exponential_lWkDrift(eng); 
+            usleep(sleepTime *10000); // sleep for random time
         }
     }
 
@@ -80,23 +104,24 @@ class localClock{
     localClock(bool driftApplicable){
         exponential_lDrift = std::exponential_distribution<double>(1.0/lDrift);
         exponential_lWkDrift = std::exponential_distribution<double>(1.0/lWkDrift);
-        errorFactor = rand()%100;
+        errorFactor = rand()%100; // initialize error factor
         if(driftApplicable)
             driftThread = thread(&localClock::incrementDriftFactor,this);
     }
     int64_t readTime(){
         std::chrono::time_point<std::chrono::system_clock> currentTime = std::chrono::high_resolution_clock::now();
+        // add driftFactor and errorFactor to current time
         currentTime += std::chrono::nanoseconds(errorFactor + driftFactor);
-        cout<<errorFactor<<" $$$ "<<driftFactor<<endl;
         auto duration = currentTime.time_since_epoch();
+        // get time in nanoseconds
         auto nanoseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(duration);
         return nanoseconds.count();
     }
     int64_t getOptimalDelta(int64_t t1,int64_t t2,int64_t t3,int64_t t4){
+        // P2P NTP Protocol
         int64_t x = (t2-t4-t1+t3)/2; 
         int64_t y = (t2 +t4 -t1-t3);
         int64_t optimalDelta = Helper::getRandomNumber(x+y/2,x-(y/2));
-        cout<<"optimalDelta::"<<optimalDelta<<" "<<x<<" "<<y<<endl;
         return optimalDelta;
     }
     void update (int64_t optimalDelta){
@@ -108,6 +133,74 @@ class localClock{
     }
 
 };
+
+/**
+ * Node class to simulate different nodes in a distributed system
+ * Member Variables
+ * id                    - Id of server (- n) 
+ * serverSocket          - socket descriptor of server on which server is listening for messages
+ * serverPort            - portNo of server
+ * inDeg,outDeg          - indegree and outdegree of node in toplogy
+ * clientListenerThreads - All the listener threads
+ * messageSenderThreads  - All the sender threads to setup connection parallely
+ * inDegreeVertices      - Incomming vertices in graph topology
+ * outDegreeVertices     - Outgoing vertices in graph topology
+ * server                - Thread to setup server port and listen for messages
+ * senderThread          - Thread to send messages to different nodes
+ * totalSent             - total Messages sent
+ * int64_t t1            - storing time of message request sent in nanoseconds 
+ *                       - (will be overwritten on every request)     
+ * port_idx              - Map to store clientSockets for a correponding client port 
+ * nodeLocalClock        - Local clock to read time in nanoseconds
+ * exponential_lP        - Exponential number generator
+ * exponential_lQ        - Exponential number generator
+ * exponential_lSend     - Exponential number generator   
+ * waitingForResponse    - Binary Semaphore to wait for message request to be fulfiled
+ *                       - before sending other request
+ * 
+ * Member Methods 
+ * 
+ * initServerNode()      
+ *  - Initializes server port and is part of server thread's funciton
+ *    It accepts all the connections and stores all the connected sockets     
+ *    in port_idx map
+ * 
+ * listenForMessage(clientId):
+ *  - listen for a message comming from a particular client id
+ * 
+ * setUpConnectionPort(serverPort , serverId)
+ *  - Set up socket file descriptor for a connection between current node 
+ *  - and a server with id serverId, for sending message to that server   
+ *    
+ * sendMessage()          
+ *  - send syncronization request to server k times selected randomly
+ * 
+ * sendMessageToSocket(int recieverSocket,string message)
+ *  - Sends a string message to a given socket  
+ * 
+ * setUpConnectionPorts()
+ *  - calls initConnection ports which start message sender threads
+ *  - with sendMessage as execution function 
+ * 
+ * startListenerThreads()
+ *  - calls initClientListnerThreads which 
+ *  - starts listener Threads with listenMessage as execution function
+ * 
+ * sendMessageThread() *  - 
+ *  - start a thread with sendMessage as execution sendMessage function 
+ * 
+ * parseString()
+ *  - Parses message and breaks them into individiual messages 
+ *  - each enclosed in  square brackets []
+ * 
+ * parseQueryString()
+ *  - Parses message which are exchanged between servers
+ *  - If starting character is q then it is query message asking for t2,t3
+ *      "[q+(totalSent)+*+(id)+]";
+ *  - If starting character is r then it is a query response message
+ *      "[r+(t2)+*+(t3)+]"; 
+ * 
+ */
 class Node{
 
     int id;
@@ -140,11 +233,11 @@ class Node{
         clientListenerThreads = new thread[n + 1]; // threads memory allocation
         messageSenderThreads  = new thread[n + 1];
         this->id = id;   
-        nodeLocalClock = new localClock(true);
+        nodeLocalClock = new localClock(true); // create a clock object
         exponential_lP = std::exponential_distribution<double>(1.0/lP);
         exponential_lQ = std::exponential_distribution<double>(1.0/lQ);
         exponential_lSend = std::exponential_distribution<double>(1.0/lSend);
-        sem_init(&waitingForResponse, 0, 0);
+        sem_init(&waitingForResponse, 0, 0); // initialize semaphore
         init();
     }
     void startListenerThreads(){ // server setup completed create listner threads
@@ -172,7 +265,7 @@ class Node{
 
 
     private:
-        void initServerNode(){
+        void initServerNode(){ 
 
             in_port_t servPort = serverPortSeed + id; // Local port
 
@@ -267,7 +360,6 @@ class Node{
             while( recvLen =  recv(socketToListen, buffer, BUFSIZE - 1, 0) > 0){
                 string message = string(buffer);
                 vector <string> sendersStrings = parseString(message);
-                cout<<id<<" "<<message<<endl;
                 for(auto senderString : sendersStrings){
 
                     time_t RecvTime=time(NULL); // build string to log to file
@@ -282,19 +374,19 @@ class Node{
                         output<<FinalString;
                         fileLock.unlock();
 
-                        // compute time and send back to sender                        
+                        // compute time and send back to requester
                         int64_t t2 = nodeLocalClock->readTime();
 
                         int serverSleepTime = exponential_lQ(eng);
                         usleep(serverSleepTime*100);
 
+                        // compute time and send back to requester   
                         int64_t t3 = nodeLocalClock->readTime();    
                         string responseString = "[r"+to_string(t2)+"*"+to_string(t3)+"]";
                         clientServerSocketLock.lock();
                         int recieverSocket = clientServerSocket[{senderId,id}];
                         clientServerSocketLock.unlock();
 
-                        cout<<"sending "<<recieverSocket<<" "<<id<<" "<<senderId<<endl;
                         ssize_t sentLen = sendMessageToSocket(recieverSocket,responseString);
 
                         time_t SendTime=time(NULL);
@@ -315,7 +407,8 @@ class Node{
                         int64_t t2 = response.first;
                         int64_t t3 = response.second;
                         int64_t t4 = nodeLocalClock->readTime();
-
+                        
+                        // compute optimal delta from t1,t2,t3,t4
                         int64_t optimalDelta = nodeLocalClock->getOptimalDelta(t1,t2,t3,t4);
                         nodeLocalClock->update(optimalDelta);
                         roundTime[id][totalSent] = nodeLocalClock->readTime();
@@ -394,7 +487,6 @@ class Node{
             clientServerSocketLock.lock();
             usleep(1000);
             clientServerSocket[{serverId,id}] = sockfd;
-            cout<<serverId<<" "<<id<<" "<<sockfd<<endl;
             usleep(1000);
             clientServerSocketLock.unlock();
         }
@@ -428,18 +520,11 @@ class Node{
                 output<<FinalString;
                 fileLock.unlock();
                 sem_wait(&waitingForResponse);
-                cout<<"Waiting over"<<endl;
                 // wait in loop untill listerner updates optimal_delta 
                
                 totalSent++;
                 usleep(exponential_lP(eng)*1000); // sleep for random time
-            }           
-            
-            // close sockets
-            // for(int i=1;i<=n;i++){
-            //     int recieverSocket = clientServerSocket[{i,id}];
-            //     close(recieverSocket);
-            // }
+            }          
 		}
 
       
@@ -457,7 +542,6 @@ class Node{
                         i++;
                     }
                     senderStrings.push_back(temp);
-                    cout<<temp<<endl;
                     temp.clear();
                 }               
             }
@@ -508,9 +592,6 @@ class Node{
         void init(){   
             server = thread(&Node::initServerNode,this);            
         }
-      
-
-   
 };
 
 int main()
@@ -560,7 +641,7 @@ int main()
         nodes[i]->startListenerThreads();
     }  
     while(listners > 0);
-    cout<<listners<<endl;
+
     for(int i=1;i<=n;i++){
         nodes[i]->sendMessageThread();
     }
@@ -569,14 +650,16 @@ int main()
         nodes[i]->SendMessageThreadJoin();
     }
 
-    cout<<n<<endl;
-
+    output2<<endl;
+    // output time after each round to a log file
     for(int i=1;i<=n;i++){
         for(int j=1;j<=k;j++){
             output2<<roundTime[i][j]<<" ";
         }       
         output2<<endl;
     }
+
+    // compute mean and variance
     for(int j=1;j<=k;j++){
         output2<<Helper::computeMean(j)<<" ";
     }    

@@ -1,200 +1,500 @@
-Server2 requests 1st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 1st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 1st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 1st syncronization response from Server1 at 22 : 31 : 3
-Computing 1st delta between server2 and server1 : 82281
-Server1 requests 1st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 1st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 1st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 1st syncronization response from Server2 at 22 : 31 : 3
-Computing 1st delta between server1 and server2 : 83621
-Server2 requests 2st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 2st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 2st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 2st syncronization response from Server1 at 22 : 31 : 3
-Computing 2st delta between server2 and server1 : 275918
-Server1 requests 2st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 2st syncronization request from Server1 at 22 : 31 : 3
-Server1 recieves 3st syncronization request from Server2 at 22 : 31 : 3
-Server2 requests 3st syncronization to Server 1 at 22 : 31 : 3
-Server2 replies 2st syncronization response to Server1 at 22 : 31 : 3
-Server1 replies 3st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 3st syncronization response from Server1 at 22 : 31 : 3
-Server1 recieves 2st syncronization response from Server2 at 22 : 31 : 3
-Computing 3st delta between server2 and server1 : -150099
-Computing 2st delta between server1 and server2 : 80795
-Server1 requests 3st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 3st syncronization request from Server1 at 22 : 31 : 3
-Server2 requests 4st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 4st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 4st syncronization response to Server2 at 22 : 31 : 3
-Server2 replies 3st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 3st syncronization response from Server2 at 22 : 31 : 3
-Server2 recieves 4st syncronization response from Server1 at 22 : 31 : 3
-Computing 3st delta between server1 and server2 : 348124
-Computing 4st delta between server2 and server1 : -99734
-Server2 requests 5st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 5st syncronization request from Server2 at 22 : 31 : 3
-Server1 requests 4st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 4st syncronization request from Server1 at 22 : 31 : 3
-Server1 replies 5st syncronization response to Server2 at 22 : 31 : 3
-Server2 replies 4st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 4st syncronization response from Server2 at 22 : 31 : 3
-Server2 recieves 5st syncronization response from Server1 at 22 : 31 : 3
-Computing 4st delta between server1 and server2 : -685797
-Computing 5st delta between server2 and server1 : -698738
-Server2 requests 6st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 6st syncronization request from Server2 at 22 : 31 : 3
-Server1 requests 5st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 5st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 5st syncronization response to Server1 at 22 : 31 : 3
-Server1 replies 6st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 6st syncronization response from Server1 at 22 : 31 : 3
-Server1 recieves 5st syncronization response from Server2 at 22 : 31 : 3
-Computing 6st delta between server2 and server1 : 70447
-Computing 5st delta between server1 and server2 : 79692
-Server2 requests 7st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 7st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 7st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 7st syncronization response from Server1 at 22 : 31 : 3
-Server1 requests 6st syncronization to Server 2 at 22 : 31 : 3
-Computing 7st delta between server2 and server1 : 243274
-Server2 recieves 6st syncronization request from Server1 at 22 : 31 : 3
-Server2 requests 8st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 8st syncronization request from Server2 at 22 : 31 : 3
-Server2 replies 6st syncronization response to Server1 at 22 : 31 : 3
-Server1 replies 8st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 8st syncronization response from Server1 at 22 : 31 : 3
-Server1 recieves 6st syncronization response from Server2 at 22 : 31 : 3
-Computing 8st delta between server2 and server1 : 197348
-Computing 6st delta between server1 and server2 : 17023
-Server2 requests 9st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 9st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 9st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 9st syncronization response from Server1 at 22 : 31 : 3
-Computing 9st delta between server2 and server1 : 317477
-Server1 requests 7st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 7st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 7st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 7st syncronization response from Server2 at 22 : 31 : 3
-Computing 7st delta between server1 and server2 : 362863
-Server1 requests 8st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 8st syncronization request from Server1 at 22 : 31 : 3
-Server1 recieves 10st syncronization request from Server2 at 22 : 31 : 3
-Server2 requests 10st syncronization to Server 1 at 22 : 31 : 3
-Server2 replies 8st syncronization response to Server1 at 22 : 31 : 3
-Server1 replies 10st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 10st syncronization response from Server1 at 22 : 31 : 3
-Server1 recieves 8st syncronization response from Server2 at 22 : 31 : 3
-Computing 10st delta between server2 and server1 : 586139
-Computing 8st delta between server1 and server2 : -119836
-Server1 requests 9st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 9st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 9st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 9st syncronization response from Server2 at 22 : 31 : 3
-Computing 9st delta between server1 and server2 : -13048
-Server2 requests 11st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 11st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 11st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 11st syncronization response from Server1 at 22 : 31 : 3
-Computing 11st delta between server2 and server1 : -523426
-Server1 requests 10st syncronization to Server 2 at 22 : 31 : 3
-Server2 requests 12st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 12st syncronization request from Server2 at 22 : 31 : 3
-Server2 recieves 10st syncronization request from Server1 at 22 : 31 : 3
-Server1 replies 12st syncronization response to Server2 at 22 : 31 : 3
-Server2 replies 10st syncronization response to Server1 at 22 : 31 : 3
-Server2 recieves 12st syncronization response from Server1 at 22 : 31 : 3
-Server1 recieves 10st syncronization response from Server2 at 22 : 31 : 3
-Computing 12st delta between server2 and server1 : 220895
-Computing 10st delta between server1 and server2 : 296610
-Server1 requests 11st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 11st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 11st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 11st syncronization response from Server2 at 22 : 31 : 3
-Computing 11st delta between server1 and server2 : 146924
-Server1 recieves 13st syncronization request from Server2 at 22 : 31 : 3
-Server2 requests 13st syncronization to Server 1 at 22 : 31 : 3
-Server1 replies 13st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 13st syncronization response from Server1 at 22 : 31 : 3
-Computing 13st delta between server2 and server1 : 196680
-Server1 requests 12st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 12st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 12st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 12st syncronization response from Server2 at 22 : 31 : 3
-Computing 12st delta between server1 and server2 : 429850
-Server1 requests 13st syncronization to Server 2 at 22 : 31 : 3
-Server1 recieves 14st syncronization request from Server2 at 22 : 31 : 3
-Server2 requests 14st syncronization to Server 1 at 22 : 31 : 3
-Server2 recieves 13st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 13st syncronization response to Server1 at 22 : 31 : 3
-Server1 replies 14st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 14st syncronization response from Server1 at 22 : 31 : 3
-Server1 recieves 13st syncronization response from Server2 at 22 : 31 : 3
-Computing 14st delta between server2 and server1 : -441865
-Computing 13st delta between server1 and server2 : -1183772
-Server2 requests 15st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 15st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 15st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 15st syncronization response from Server1 at 22 : 31 : 3
-Computing 15st delta between server2 and server1 : -662551
-Server1 requests 14st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 14st syncronization request from Server1 at 22 : 31 : 3
-Server1 recieves 16st syncronization request from Server2 at 22 : 31 : 3
-Server2 requests 16st syncronization to Server 1 at 22 : 31 : 3
-Server1 replies 16st syncronization response to Server2 at 22 : 31 : 3
-Server1 recieves 14st syncronization response from Server2 at 22 : 31 : 3
-Computing 14st delta between server1 and server2 : -292014
-Server2 replies 14st syncronization response to Server1 at 22 : 31 : 3
-Server2 recieves 16st syncronization response from Server1 at 22 : 31 : 3
-Computing 16st delta between server2 and server1 : 206201
-Server1 requests 15st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 15st syncronization request from Server1 at 22 : 31 : 3
-Server2 requests 17st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 17st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 17st syncronization response to Server2 at 22 : 31 : 3
-Server2 replies 15st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 15st syncronization response from Server2 at 22 : 31 : 3
-Server2 recieves 17st syncronization response from Server1 at 22 : 31 : 3
-Computing 15st delta between server1 and server2 : -189817
-Computing 17st delta between server2 and server1 : -194022
-Server2 requests 18st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 18st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 18st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 18st syncronization response from Server1 at 22 : 31 : 3
-Computing 18st delta between server2 and server1 : -303945
-Server1 requests 16st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 16st syncronization request from Server1 at 22 : 31 : 3
-Server1 recieves 16st syncronization response from Server2 at 22 : 31 : 3
-Computing 16st delta between server1 and server2 : 465874
-Server2 replies 16st syncronization response to Server1 at 22 : 31 : 3
-Server1 requests 17st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 17st syncronization request from Server1 at 22 : 31 : 3
-Server1 recieves 17st syncronization response from Server2 at 22 : 31 : 3
-Computing 17st delta between server1 and server2 : -450417
-Server2 replies 17st syncronization response to Server1 at 22 : 31 : 3
-Server2 requests 19st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 19st syncronization request from Server2 at 22 : 31 : 3
-Server1 replies 19st syncronization response to Server2 at 22 : 31 : 3
-Server2 recieves 19st syncronization response from Server1 at 22 : 31 : 3
-Computing 19st delta between server2 and server1 : -161173
-Server2 requests 20st syncronization to Server 1 at 22 : 31 : 3
-Server1 recieves 20st syncronization request from Server2 at 22 : 31 : 3
-Server1 requests 18st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 18st syncronization request from Server1 at 22 : 31 : 3
-Server1 replies 20st syncronization response to Server2 at 22 : 31 : 3
-Server2 replies 18st syncronization response to Server1 at 22 : 31 : 3
-Server2 recieves 20st syncronization response from Server1 at 22 : 31 : 3
-Computing 20st delta between server2 and server1 : 87218
-Server1 recieves 18st syncronization response from Server2 at 22 : 31 : 3
-Computing 18st delta between server1 and server2 : 56517
-Server1 requests 19st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 19st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 19st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 19st syncronization response from Server2 at 22 : 31 : 3
-Computing 19st delta between server1 and server2 : -677688
-Server1 requests 20st syncronization to Server 2 at 22 : 31 : 3
-Server2 recieves 20st syncronization request from Server1 at 22 : 31 : 3
-Server2 replies 20st syncronization response to Server1 at 22 : 31 : 3
-Server1 recieves 20st syncronization response from Server2 at 22 : 31 : 3
-Computing 20st delta between server1 and server2 : 643601
+Server6 recieves 1st syncronization request from Server4 at 0 : 46 : 8
+Server1 recieves 1st syncronization request from Server2 at 0 : 46 : 8
+Server2 requests 1st syncronization to Server 1 at 0 : 46 : 8
+Server4 requests 1st syncronization to Server 6 at 0 : 46 : 8
+Server8 requests 1st syncronization to Server 5 at 0 : 46 : 8
+Server2 recieves 1st syncronization request from Server9 at 0 : 46 : 8
+Server9 requests 1st syncronization to Server 2 at 0 : 46 : 8
+Server5 recieves 1st syncronization request from Server8 at 0 : 46 : 8
+Server3 requests 1st syncronization to Server 6 at 0 : 46 : 8
+Server10 requests 1st syncronization to Server 7 at 0 : 46 : 8
+Server6 recieves 1st syncronization request from Server3 at 0 : 46 : 8
+Server7 recieves 1st syncronization request from Server10 at 0 : 46 : 8
+Server6 replies 1st syncronization response to Server4 at 0 : 46 : 8
+Server4 recieves 1st syncronization response from Server6 at 0 : 46 : 8
+Computing 1st delta between server4 and server6 : 21397
+Server1 requests 1st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 1st syncronization request from Server1 at 0 : 46 : 8
+Server2 replies 1st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 1st syncronization response from Server2 at 0 : 46 : 8
+Computing 1st delta between server9 and server2 : -16452
+Server1 replies 1st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 1st syncronization response from Server1 at 0 : 46 : 8
+Computing 1st delta between server2 and server1 : -94319
+Server6 requests 1st syncronization to Server 7 at 0 : 46 : 8
+Server7 recieves 1st syncronization request from Server6 at 0 : 46 : 8
+Server7 replies 1st syncronization response to Server10 at 0 : 46 : 8
+Server5 requests 1st syncronization to Server 1 at 0 : 46 : 8
+Server10 recieves 1st syncronization response from Server7 at 0 : 46 : 8
+Computing 1st delta between server10 and server7 : 115522
+Server1 recieves 1st syncronization request from Server5 at 0 : 46 : 8
+Server6 replies 1st syncronization response to Server3 at 0 : 46 : 8
+Server7 requests 1st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 1st syncronization request from Server7 at 0 : 46 : 8
+Server3 recieves 1st syncronization response from Server6 at 0 : 46 : 8
+Computing 1st delta between server3 and server6 : 33266
+Server6 replies 1st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 1st syncronization response from Server6 at 0 : 46 : 8
+Computing 1st delta between server1 and server6 : 529412
+Server6 recieves 1st syncronization response from Server7 at 0 : 46 : 8
+Computing 1st delta between server6 and server7 : 201567
+Server7 replies 1st syncronization response to Server6 at 0 : 46 : 8
+Server1 replies 1st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 1st syncronization response from Server1 at 0 : 46 : 8
+Computing 1st delta between server5 and server1 : 6545
+Server8 replies 1st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 1st syncronization response from Server8 at 0 : 46 : 8
+Computing 1st delta between server7 and server8 : 748407
+Server1 requests 2st syncronization to Server 10 at 0 : 46 : 8
+Server10 recieves 2st syncronization request from Server1 at 0 : 46 : 8
+Server5 replies 1st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 1st syncronization response from Server5 at 0 : 46 : 8
+Computing 1st delta between server8 and server5 : -439972
+Server9 recieves 2st syncronization request from Server4 at 0 : 46 : 8
+Server4 requests 2st syncronization to Server 9 at 0 : 46 : 8
+Server7 recieves 2st syncronization request from Server2 at 0 : 46 : 8
+Server2 requests 2st syncronization to Server 7 at 0 : 46 : 8
+Server9 requests 2st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 2st syncronization request from Server9 at 0 : 46 : 8
+Server3 requests 2st syncronization to Server 1 at 0 : 46 : 8
+Server7 replies 2st syncronization response to Server2 at 0 : 46 : 8
+Server1 recieves 2st syncronization request from Server3 at 0 : 46 : 8
+Server2 recieves 2st syncronization response from Server7 at 0 : 46 : 8
+Server8 requests 2st syncronization to Server 3 at 0 : 46 : 8
+Computing 2st delta between server2 and server7 : 875702
+Server10 replies 2st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 2st syncronization response from Server10 at 0 : 46 : 8
+Computing 2st delta between server1 and server10 : -363176
+Server3 recieves 2st syncronization request from Server8 at 0 : 46 : 8
+Server7 requests 2st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 2st syncronization request from Server7 at 0 : 46 : 8
+Server1 replies 2st syncronization response to Server3 at 0 : 46 : 8
+Server4 recieves 2st syncronization response from Server9 at 0 : 46 : 8
+Computing 2st delta between server4 and server9 : 328835
+Server9 replies 2st syncronization response to Server4 at 0 : 46 : 8
+Server3 recieves 2st syncronization response from Server1 at 0 : 46 : 8
+Computing 2st delta between server3 and server1 : 567398
+Server3 replies 2st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 2st syncronization response from Server3 at 0 : 46 : 8
+Computing 2st delta between server9 and server3 : 455306
+Server4 requests 3st syncronization to Server 1 at 0 : 46 : 8
+Server1 recieves 3st syncronization request from Server4 at 0 : 46 : 8
+Server3 requests 3st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 3st syncronization request from Server3 at 0 : 46 : 8
+Server6 requests 2st syncronization to Server 1 at 0 : 46 : 8
+Server1 recieves 2st syncronization request from Server6 at 0 : 46 : 8
+Server1 replies 3st syncronization response to Server4 at 0 : 46 : 8
+Server4 recieves 3st syncronization response from Server1 at 0 : 46 : 8
+Computing 3st delta between server4 and server1 : -115930
+Server1 replies 2st syncronization response to Server6 at 0 : 46 : 8
+Server6 recieves 2st syncronization response from Server1 at 0 : 46 : 8
+Computing 2st delta between server6 and server1 : 135828
+Server8 recieves 2st syncronization response from Server3 at 0 : 46 : 8
+Computing 2st delta between server8 and server3 : 580178
+Server3 replies 2st syncronization response to Server8 at 0 : 46 : 8
+Server2 requests 3st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 3st syncronization request from Server2 at 0 : 46 : 8
+Server5 replies 2st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 2st syncronization response from Server5 at 0 : 46 : 8
+Computing 2st delta between server7 and server5 : -1286088
+Server6 replies 3st syncronization response to Server3 at 0 : 46 : 8
+Server3 recieves 3st syncronization response from Server6 at 0 : 46 : 8
+Computing 3st delta between server3 and server6 : -108973
+Server5 replies 3st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 3st syncronization response from Server5 at 0 : 46 : 8
+Computing 3st delta between server2 and server5 : -800084
+Server10 requests 2st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 2st syncronization request from Server10 at 0 : 46 : 8
+Server7 requests 3st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 3st syncronization request from Server7 at 0 : 46 : 8
+Server8 requests 3st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 3st syncronization request from Server8 at 0 : 46 : 8
+Server5 replies 2st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 2st syncronization response from Server5 at 0 : 46 : 8
+Computing 2st delta between server10 and server5 : -99290
+Server6 requests 3st syncronization to Server 10 at 0 : 46 : 8
+Server10 recieves 3st syncronization request from Server6 at 0 : 46 : 8
+Server5 requests 2st syncronization to Server 10 at 0 : 46 : 8
+Server10 recieves 2st syncronization request from Server5 at 0 : 46 : 8
+Server9 replies 3st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 3st syncronization response from Server9 at 0 : 46 : 8
+Computing 3st delta between server7 and server9 : 1058846
+Server6 recieves 3st syncronization response from Server10 at 0 : 46 : 8
+Computing 3st delta between server6 and server10 : 48930
+Server10 replies 3st syncronization response to Server6 at 0 : 46 : 8
+Server10 replies 2st syncronization response to Server5 at 0 : 46 : 8
+Server6 replies 3st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 3st syncronization response from Server6 at 0 : 46 : 8
+Server5 recieves 2st syncronization response from Server10 at 0 : 46 : 8
+Computing 3st delta between server8 and server6 : 346633
+Computing 2st delta between server5 and server10 : 470075
+Server1 requests 3st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 3st syncronization request from Server1 at 0 : 46 : 8
+Server5 replies 3st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 3st syncronization response from Server5 at 0 : 46 : 8
+Computing 3st delta between server1 and server5 : 205556
+Server6 requests 4st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 4st syncronization request from Server6 at 0 : 46 : 8
+Server4 requests 4st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 4st syncronization request from Server4 at 0 : 46 : 8
+Server8 replies 4st syncronization response to Server6 at 0 : 46 : 8
+Server6 recieves 4st syncronization response from Server8 at 0 : 46 : 8
+Computing 4st delta between server6 and server8 : 334793
+Server5 requests 3st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 3st syncronization request from Server5 at 0 : 46 : 8
+Server3 requests 4st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 4st syncronization request from Server3 at 0 : 46 : 8
+Server9 replies 4st syncronization response to Server4 at 0 : 46 : 8
+Server4 recieves 4st syncronization response from Server9 at 0 : 46 : 8
+Computing 4st delta between server4 and server9 : 141450
+Server6 replies 4st syncronization response to Server3 at 0 : 46 : 8
+Server6 replies 3st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 3st syncronization response from Server6 at 0 : 46 : 8
+Computing 3st delta between server5 and server6 : 464442
+Server3 recieves 4st syncronization response from Server6 at 0 : 46 : 8
+Computing 4st delta between server3 and server6 : 279170
+Server10 requests 3st syncronization to Server 5 at 0 : 46 : 8
+Server7 requests 4st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 4st syncronization request from Server7 at 0 : 46 : 8
+Server5 recieves 3st syncronization request from Server10 at 0 : 46 : 8
+Server5 replies 3st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 3st syncronization response from Server5 at 0 : 46 : 8
+Computing 3st delta between server10 and server5 : 835890
+Server2 requests 4st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 4st syncronization request from Server2 at 0 : 46 : 8
+Server3 replies 4st syncronization response to Server7 at 0 : 46 : 8
+Server1 requests 4st syncronization to Server 2 at 0 : 46 : 8
+Server7 recieves 4st syncronization response from Server3 at 0 : 46 : 8
+Computing 4st delta between server7 and server3 : 335968
+Server5 recieves 3st syncronization request from Server9 at 0 : 46 : 8
+Server2 recieves 4st syncronization request from Server1 at 0 : 46 : 8
+Server9 requests 3st syncronization to Server 5 at 0 : 46 : 8
+Server2 replies 4st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 4st syncronization response from Server2 at 0 : 46 : 8
+Computing 4st delta between server1 and server2 : 130385
+Server5 replies 3st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 3st syncronization response from Server5 at 0 : 46 : 8
+Computing 3st delta between server9 and server5 : 589999
+Server10 requests 4st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 4st syncronization request from Server10 at 0 : 46 : 8
+Server8 requests 4st syncronization to Server 7 at 0 : 46 : 8
+Server7 recieves 4st syncronization request from Server8 at 0 : 46 : 8
+Server9 replies 4st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 4st syncronization response from Server9 at 0 : 46 : 8
+Computing 4st delta between server10 and server9 : 148412
+Server7 replies 4st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 4st syncronization response from Server7 at 0 : 46 : 8
+Computing 4st delta between server8 and server7 : 568759
+Server8 replies 4st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 4st syncronization response from Server8 at 0 : 46 : 8
+Computing 4st delta between server2 and server8 : 462592
+Server6 requests 5st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 5st syncronization request from Server6 at 0 : 46 : 8
+Server4 requests 5st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 5st syncronization request from Server4 at 0 : 46 : 8
+Server5 replies 5st syncronization response to Server4 at 0 : 46 : 8
+Server8 requests 5st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 5st syncronization request from Server8 at 0 : 46 : 8
+Server4 recieves 5st syncronization response from Server5 at 0 : 46 : 8
+Computing 5st delta between server4 and server5 : 567149
+Server10 requests 5st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 5st syncronization request from Server10 at 0 : 46 : 8
+Server4 recieves 5st syncronization request from Server7 at 0 : 46 : 8
+Server7 requests 5st syncronization to Server 4 at 0 : 46 : 8
+Server8 recieves 5st syncronization request from Server1 at 0 : 46 : 8
+Server1 requests 5st syncronization to Server 8 at 0 : 46 : 8
+Server9 replies 5st syncronization response to Server6 at 0 : 46 : 8
+Server6 recieves 5st syncronization response from Server9 at 0 : 46 : 8
+Computing 5st delta between server6 and server9 : 674283
+Server3 requests 5st syncronization to Server 1 at 0 : 46 : 8
+Server1 recieves 5st syncronization request from Server3 at 0 : 46 : 8
+Server8 replies 5st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 5st syncronization response from Server8 at 0 : 46 : 8
+Computing 5st delta between server1 and server8 : 616544
+Server4 replies 5st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 5st syncronization response from Server4 at 0 : 46 : 8
+Computing 5st delta between server7 and server4 : 303153
+Server1 replies 5st syncronization response to Server3 at 0 : 46 : 8
+Server3 recieves 5st syncronization response from Server1 at 0 : 46 : 8
+Computing 5st delta between server3 and server1 : 51369
+Server5 replies 5st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 5st syncronization response from Server5 at 0 : 46 : 8
+Computing 5st delta between server8 and server5 : -54102
+Server9 replies 5st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 5st syncronization response from Server9 at 0 : 46 : 8
+Computing 5st delta between server10 and server9 : 1158
+Server10 requests 6st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 6st syncronization request from Server10 at 0 : 46 : 8
+Server2 requests 5st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 5st syncronization request from Server2 at 0 : 46 : 8
+Server3 requests 6st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 6st syncronization request from Server3 at 0 : 46 : 8
+Server3 replies 5st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 5st syncronization response from Server3 at 0 : 46 : 8
+Computing 5st delta between server2 and server3 : 321976
+Server5 replies 6st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 6st syncronization response from Server5 at 0 : 46 : 8
+Computing 6st delta between server10 and server5 : 19685
+Server1 requests 6st syncronization to Server 4 at 0 : 46 : 8
+Server4 recieves 6st syncronization request from Server1 at 0 : 46 : 8
+Server4 replies 6st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 6st syncronization response from Server4 at 0 : 46 : 8
+Computing 6st delta between server1 and server4 : -282678
+Server7 requests 6st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 6st syncronization request from Server7 at 0 : 46 : 8
+Server8 replies 6st syncronization response to Server3 at 0 : 46 : 8
+Server3 recieves 6st syncronization response from Server8 at 0 : 46 : 8
+Computing 6st delta between server3 and server8 : -374506
+Server2 requests 6st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 6st syncronization request from Server2 at 0 : 46 : 8
+Server5 replies 6st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 6st syncronization response from Server5 at 0 : 46 : 8
+Computing 6st delta between server7 and server5 : -249358
+Server7 recieves 6st syncronization request from Server6 at 0 : 46 : 8
+Server6 requests 6st syncronization to Server 7 at 0 : 46 : 8
+Server1 requests 7st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 7st syncronization request from Server1 at 0 : 46 : 8
+Server8 replies 6st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 6st syncronization response from Server8 at 0 : 46 : 8
+Computing 6st delta between server2 and server8 : -67641
+Server8 requests 6st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 6st syncronization request from Server8 at 0 : 46 : 8
+Server7 replies 6st syncronization response to Server6 at 0 : 46 : 8
+Server8 recieves 7st syncronization request from Server10 at 0 : 46 : 8
+Server10 requests 7st syncronization to Server 8 at 0 : 46 : 8
+Server6 recieves 6st syncronization response from Server7 at 0 : 46 : 8
+Computing 6st delta between server6 and server7 : -526737
+Server6 replies 7st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 7st syncronization response from Server6 at 0 : 46 : 8
+Computing 7st delta between server1 and server6 : 590435
+Server9 requests 4st syncronization to Server 4 at 0 : 46 : 8
+Server4 recieves 4st syncronization request from Server9 at 0 : 46 : 8
+Server5 replies 6st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 6st syncronization response from Server5 at 0 : 46 : 8
+Computing 6st delta between server8 and server5 : -160038
+Server7 requests 7st syncronization to Server 9 at 0 : 46 : 8
+Server8 replies 7st syncronization response to Server10 at 0 : 46 : 8
+Server9 recieves 7st syncronization request from Server7 at 0 : 46 : 8
+Server10 recieves 7st syncronization response from Server8 at 0 : 46 : 8
+Computing 7st delta between server10 and server8 : -681046
+Server4 replies 4st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 4st syncronization response from Server4 at 0 : 46 : 8
+Computing 4st delta between server9 and server4 : -228064
+Server9 replies 7st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 7st syncronization response from Server9 at 0 : 46 : 8
+Computing 7st delta between server7 and server9 : 600579
+Server10 requests 8st syncronization to Server 1 at 0 : 46 : 8
+Server1 recieves 8st syncronization request from Server10 at 0 : 46 : 8
+Server4 requests 6st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 6st syncronization request from Server4 at 0 : 46 : 8
+Server3 requests 7st syncronization to Server 2 at 0 : 46 : 8
+Server2 recieves 7st syncronization request from Server3 at 0 : 46 : 8
+Server1 replies 8st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 8st syncronization response from Server1 at 0 : 46 : 8
+Computing 8st delta between server10 and server1 : 1322867
+Server7 requests 8st syncronization to Server 9 at 0 : 46 : 8
+Server2 replies 7st syncronization response to Server3 at 0 : 46 : 8
+Server9 recieves 8st syncronization request from Server7 at 0 : 46 : 8
+Server3 recieves 7st syncronization response from Server2 at 0 : 46 : 8
+Computing 7st delta between server3 and server2 : 414764
+Server8 replies 6st syncronization response to Server4 at 0 : 46 : 8
+Server4 recieves 6st syncronization response from Server8 at 0 : 46 : 8
+Computing 6st delta between server4 and server8 : -688382
+Server8 requests 7st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 7st syncronization request from Server8 at 0 : 46 : 8
+Server9 replies 8st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 8st syncronization response from Server9 at 0 : 46 : 8
+Computing 8st delta between server7 and server9 : -515771
+Server9 requests 5st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 5st syncronization request from Server9 at 0 : 46 : 8
+Server7 requests 9st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 9st syncronization request from Server7 at 0 : 46 : 8
+Server2 requests 7st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 7st syncronization request from Server2 at 0 : 46 : 8
+Server2 recieves 7st syncronization response from Server6 at 0 : 46 : 8
+Computing 7st delta between server2 and server6 : 101196
+Server6 replies 7st syncronization response to Server2 at 0 : 46 : 8
+Server9 replies 7st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 7st syncronization response from Server9 at 0 : 46 : 8
+Computing 7st delta between server8 and server9 : 326204
+Server3 replies 9st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 9st syncronization response from Server3 at 0 : 46 : 8
+Computing 9st delta between server7 and server3 : -159281
+Server3 requests 8st syncronization to Server 1 at 0 : 46 : 8
+Server1 recieves 8st syncronization request from Server3 at 0 : 46 : 8
+Server1 replies 8st syncronization response to Server3 at 0 : 46 : 8
+Server3 recieves 8st syncronization response from Server1 at 0 : 46 : 8
+Computing 8st delta between server3 and server1 : 722920
+Server3 replies 5st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 5st syncronization response from Server3 at 0 : 46 : 8
+Computing 5st delta between server9 and server3 : -363545
+Server1 requests 8st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 8st syncronization request from Server1 at 0 : 46 : 8
+Server10 requests 9st syncronization to Server 4 at 0 : 46 : 8
+Server4 recieves 9st syncronization request from Server10 at 0 : 46 : 8
+Server4 replies 9st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 9st syncronization response from Server4 at 0 : 46 : 8
+Computing 9st delta between server10 and server4 : -1359470
+Server5 replies 8st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 8st syncronization response from Server5 at 0 : 46 : 8
+Computing 8st delta between server1 and server5 : -631488
+Server2 requests 8st syncronization to Server 7 at 0 : 46 : 8
+Server7 recieves 8st syncronization request from Server2 at 0 : 46 : 8
+Server7 replies 8st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 8st syncronization response from Server7 at 0 : 46 : 8
+Computing 8st delta between server2 and server7 : 12738
+Server4 requests 7st syncronization to Server 10 at 0 : 46 : 8
+Server10 recieves 7st syncronization request from Server4 at 0 : 46 : 8
+Server9 requests 6st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 6st syncronization request from Server9 at 0 : 46 : 8
+Server8 requests 8st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 8st syncronization request from Server8 at 0 : 46 : 8
+Server1 requests 9st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 9st syncronization request from Server1 at 0 : 46 : 8
+Server3 requests 9st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 9st syncronization request from Server3 at 0 : 46 : 8
+Server6 replies 9st syncronization response to Server3 at 0 : 46 : 8
+Server3 recieves 9st syncronization response from Server6 at 0 : 46 : 8
+Computing 9st delta between server3 and server6 : 144694
+Server10 replies 7st syncronization response to Server4 at 0 : 46 : 8
+Server4 recieves 7st syncronization response from Server10 at 0 : 46 : 8
+Computing 7st delta between server4 and server10 : -302764
+Server2 requests 9st syncronization to Server 7 at 0 : 46 : 8
+Server9 replies 8st syncronization response to Server8 at 0 : 46 : 8
+Server7 recieves 9st syncronization request from Server2 at 0 : 46 : 8
+Server7 requests 10st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 10st syncronization request from Server7 at 0 : 46 : 8
+Server8 recieves 8st syncronization response from Server9 at 0 : 46 : 8
+Computing 8st delta between server8 and server9 : -934125
+Server8 replies 9st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 9st syncronization response from Server8 at 0 : 46 : 8
+Computing 9st delta between server1 and server8 : 403439
+Server5 requests 4st syncronization to Server 2 at 0 : 46 : 8
+Server2 recieves 4st syncronization request from Server5 at 0 : 46 : 8
+Server3 replies 6st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 6st syncronization response from Server3 at 0 : 46 : 8
+Computing 6st delta between server9 and server3 : 1149130
+Server7 replies 9st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 9st syncronization response from Server7 at 0 : 46 : 8
+Computing 9st delta between server2 and server7 : -224446
+Server2 replies 4st syncronization response to Server5 at 0 : 46 : 8
+Server2 requests 10st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 10st syncronization request from Server2 at 0 : 46 : 8
+Server1 recieves 9st syncronization request from Server8 at 0 : 46 : 8
+Server5 recieves 4st syncronization response from Server2 at 0 : 46 : 8
+Computing 4st delta between server5 and server2 : 284009
+Server8 requests 9st syncronization to Server 1 at 0 : 46 : 8
+Server10 requests 10st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 10st syncronization request from Server10 at 0 : 46 : 8
+Server6 requests 7st syncronization to Server 2 at 0 : 46 : 8
+Server2 recieves 7st syncronization request from Server6 at 0 : 46 : 8
+Server8 replies 10st syncronization response to Server2 at 0 : 46 : 8
+Server2 recieves 10st syncronization response from Server8 at 0 : 46 : 8
+Computing 10st delta between server2 and server8 : -274887
+Server8 replies 10st syncronization response to Server7 at 0 : 46 : 8
+Server7 recieves 10st syncronization response from Server8 at 0 : 46 : 8
+Computing 10st delta between server7 and server8 : -375328
+Server2 replies 7st syncronization response to Server6 at 0 : 46 : 8
+Server6 recieves 7st syncronization response from Server2 at 0 : 46 : 8
+Computing 7st delta between server6 and server2 : -276914
+Server8 replies 10st syncronization response to Server10 at 0 : 46 : 8
+Server10 recieves 10st syncronization response from Server8 at 0 : 46 : 8
+Computing 10st delta between server10 and server8 : -240254
+Server3 requests 10st syncronization to Server 4 at 0 : 46 : 8
+Server4 recieves 10st syncronization request from Server3 at 0 : 46 : 8
+Server1 replies 9st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 9st syncronization response from Server1 at 0 : 46 : 8
+Computing 9st delta between server8 and server1 : 256815
+Server5 requests 5st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 5st syncronization request from Server5 at 0 : 46 : 8
+Server9 requests 7st syncronization to Server 2 at 0 : 46 : 8
+Server2 recieves 7st syncronization request from Server9 at 0 : 46 : 8
+Server3 recieves 10st syncronization response from Server4 at 0 : 46 : 8
+Computing 10st delta between server3 and server4 : -1939586
+Server4 replies 10st syncronization response to Server3 at 0 : 46 : 8
+Server2 replies 7st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 7st syncronization response from Server2 at 0 : 46 : 8
+Computing 7st delta between server9 and server2 : -1447918
+Server3 replies 5st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 5st syncronization response from Server3 at 0 : 46 : 8
+Computing 5st delta between server5 and server3 : 488686
+Server5 requests 6st syncronization to Server 4 at 0 : 46 : 8
+Server4 recieves 6st syncronization request from Server5 at 0 : 46 : 8
+Server4 replies 6st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 6st syncronization response from Server4 at 0 : 46 : 8
+Computing 6st delta between server5 and server4 : -1650919
+Server9 requests 8st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 8st syncronization request from Server9 at 0 : 46 : 8
+Server4 requests 8st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 8st syncronization request from Server4 at 0 : 46 : 8
+Server1 requests 10st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 10st syncronization request from Server1 at 0 : 46 : 8
+Server6 replies 8st syncronization response to Server4 at 0 : 46 : 8
+Server8 requests 10st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 10st syncronization request from Server8 at 0 : 46 : 8
+Server4 recieves 8st syncronization response from Server6 at 0 : 46 : 8
+Computing 8st delta between server4 and server6 : 509515
+Server3 replies 10st syncronization response to Server1 at 0 : 46 : 8
+Server1 recieves 10st syncronization response from Server3 at 0 : 46 : 8
+Computing 10st delta between server1 and server3 : -1529990
+Server6 requests 8st syncronization to Server 7 at 0 : 46 : 8
+Server7 recieves 8st syncronization request from Server6 at 0 : 46 : 8
+Server3 replies 10st syncronization response to Server8 at 0 : 46 : 8
+Server8 recieves 10st syncronization response from Server3 at 0 : 46 : 8
+Computing 10st delta between server8 and server3 : -341882
+Server4 requests 9st syncronization to Server 6 at 0 : 46 : 8
+Server6 recieves 9st syncronization request from Server4 at 0 : 46 : 8
+Server5 requests 7st syncronization to Server 1 at 0 : 46 : 8
+Server1 recieves 7st syncronization request from Server5 at 0 : 46 : 8
+Server7 replies 8st syncronization response to Server6 at 0 : 46 : 8
+Server6 recieves 8st syncronization response from Server7 at 0 : 46 : 8
+Computing 8st delta between server6 and server7 : -373845
+Server6 replies 9st syncronization response to Server4 at 0 : 46 : 8
+Server4 recieves 9st syncronization response from Server6 at 0 : 46 : 8
+Computing 9st delta between server4 and server6 : 100940
+Server1 replies 7st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 7st syncronization response from Server1 at 0 : 46 : 8
+Computing 7st delta between server5 and server1 : -42335
+Server5 replies 8st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 8st syncronization response from Server5 at 0 : 46 : 8
+Computing 8st delta between server9 and server5 : 62222
+Server6 requests 9st syncronization to Server 4 at 0 : 46 : 8
+Server4 recieves 9st syncronization request from Server6 at 0 : 46 : 8
+Server4 replies 9st syncronization response to Server6 at 0 : 46 : 8
+Server6 recieves 9st syncronization response from Server4 at 0 : 46 : 8
+Computing 9st delta between server6 and server4 : 50671
+Server6 requests 10st syncronization to Server 9 at 0 : 46 : 8
+Server9 recieves 10st syncronization request from Server6 at 0 : 46 : 8
+Server5 requests 8st syncronization to Server 3 at 0 : 46 : 8
+Server3 recieves 8st syncronization request from Server5 at 0 : 46 : 8
+Server9 replies 10st syncronization response to Server6 at 0 : 46 : 8
+Server7 recieves 10st syncronization request from Server4 at 0 : 46 : 8
+Server6 recieves 10st syncronization response from Server9 at 0 : 46 : 8
+Computing 10st delta between server6 and server9 : -491239
+Server4 requests 10st syncronization to Server 7 at 0 : 46 : 8
+Server3 replies 8st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 8st syncronization response from Server3 at 0 : 46 : 8
+Computing 8st delta between server5 and server3 : -449946
+Server7 replies 10st syncronization response to Server4 at 0 : 46 : 8
+Server4 recieves 10st syncronization response from Server7 at 0 : 46 : 8
+Computing 10st delta between server4 and server7 : 479365
+Server9 requests 9st syncronization to Server 7 at 0 : 46 : 8
+Server7 recieves 9st syncronization request from Server9 at 0 : 46 : 8
+Server5 requests 9st syncronization to Server 8 at 0 : 46 : 8
+Server8 recieves 9st syncronization request from Server5 at 0 : 46 : 8
+Server7 replies 9st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 9st syncronization response from Server7 at 0 : 46 : 8
+Computing 9st delta between server9 and server7 : -30904
+Server8 replies 9st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 9st syncronization response from Server8 at 0 : 46 : 8
+Computing 9st delta between server5 and server8 : 740810
+Server5 requests 10st syncronization to Server 4 at 0 : 46 : 8
+Server4 recieves 10st syncronization request from Server5 at 0 : 46 : 8
+Server4 replies 10st syncronization response to Server5 at 0 : 46 : 8
+Server5 recieves 10st syncronization response from Server4 at 0 : 46 : 8
+Computing 10st delta between server5 and server4 : 601324
+Server9 requests 10st syncronization to Server 5 at 0 : 46 : 8
+Server5 recieves 10st syncronization request from Server9 at 0 : 46 : 8
+Server5 replies 10st syncronization response to Server9 at 0 : 46 : 8
+Server9 recieves 10st syncronization response from Server5 at 0 : 46 : 8
+Computing 10st delta between server9 and server5 : 362752
